@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    background:black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.year{
+    color:#ffeb3b;
+    font-family:sans-serif;
+    font-weight:800;
+    font-size:10rem;
+    display:flex;
+    text-shadow: 0px 0px 10px #ff8c3b,
+    0px 0px 40px #ff8c3b,
+    0px 0px 80px #ff8c3b,
+    0px 0px 160px #ff8c3b,
+    0px 0px 240px #ff8c3b;
+}
+
+.year:hover > li{
+    animation:smoke ease-in-out 3s ;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes smoke{
+    0%{
+        transform: rotate(0deg);
+        opacity:1;
+        filter:blur(8px);
+    }
+    50%{
+        transform: rotate(45deg) translate(200px,-200px);
+        opacity: 0;
+        filter:blur(16px);
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 1;
+
+    }
+}
